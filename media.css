@@ -165,16 +165,10 @@
 @media(max-width:574.98px){
 
     /******** navbar *****/
-    .burger{
+    /* .burger{
         display: block;
-    }
-    .navbar{
-        left: -150px !important;
-    }
-    .navbar.active{
-        left: 30px !important;
-    }
-
+    } */
+   
     .header-scroll-bottom {
         font-size: 12px;
         right: -100px;
