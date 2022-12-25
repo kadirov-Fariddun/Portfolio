@@ -42,7 +42,7 @@ headerAvaLogos.onclick = () => {
 
 window.addEventListener('load', () => {
     setTimeout(() => {
-        navbar.style.left = '30px';
+        // navbar.style.left = '30px';
         headerAvatarka.style.opacity = 1;
         headerAvatarka.style.transform = 'translate(0)';
         headerTitle.style.transform = 'translate(0)';
