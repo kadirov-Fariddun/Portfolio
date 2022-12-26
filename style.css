@@ -10,6 +10,7 @@ body{
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    font-family: 'Montserrat', sans-serif;
 }
 
 html{
@@ -25,6 +26,7 @@ html{
     margin: 0;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 ul{
     padding: 0;
@@ -157,7 +159,7 @@ a{
     transition: .5s all;
     margin-bottom: 150px;
     padding-top: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
     -webkit-transform: translateY(-150px);
         -ms-transform: translateY(-150px);
@@ -354,7 +356,7 @@ a{
 }
 
 .about__title{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 100;
     font-size: 22px;
     padding: 10px;
@@ -369,7 +371,7 @@ a{
     text-align: left;
     line-height: 24px;
     margin: 0 auto;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 100;
     margin-bottom: 70px;
 }
@@ -488,7 +490,7 @@ a{
 
 
 .languages__title{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     letter-spacing: 1px;
     margin-bottom: 20px;
     font-size: 20px;
@@ -591,7 +593,7 @@ a{
     z-index: -1;
     overflow: hidden;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .carousel-item__name span{
@@ -627,7 +629,7 @@ a{
     margin-bottom: 150px;
 }
 .members__title{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     letter-spacing: 1px;
     font-size: 20px;
     font-weight: 100;
@@ -664,7 +666,7 @@ a{
     font-size: 24px;
     font-weight: 600;
     letter-spacing: 1px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin-bottom: 40px;
 }
 
@@ -676,7 +678,7 @@ a{
 }
 
 .members-item-titles__sub-title{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     line-height: 24px;
     max-width: 400px;
     width: 100%;
@@ -696,7 +698,7 @@ a{
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     letter-spacing: 1px;
     border-radius: 30px;
     color: #fff;
@@ -718,7 +720,7 @@ a{
 .contact__title{
     text-align: center;
     margin-bottom: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     font-weight: 100;
     letter-spacing: 2px;
@@ -775,7 +777,7 @@ a{
 }
 
 .contact-items-item__title{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     letter-spacing: 1px;
     font-size: 25px;
@@ -784,7 +786,7 @@ a{
 
 .contact-items-item__sub-title{
     font-size: 14px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     letter-spacing: 1px;
     color: rgb(255,255,255,.5);
     margin-bottom: 40px;
@@ -799,7 +801,7 @@ a{
 
 .footer__title{
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 100;
     font-size: 20px;
     letter-spacing: 1px;
@@ -815,7 +817,7 @@ a{
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     margin-bottom: 40px;
 }
