@@ -858,6 +858,20 @@ a{
     fill:rgb(64, 158, 221);
 }
 
-.footer__links a:nth-child(4){
+
+
+.footer__links a.kwork-logo{
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
     margin-right: 0;
+    -webkit-text-stroke: #fff 1px;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer__links a.kwork-logo:hover{
+    -webkit-transition: .3s all;
+    -o-transition: .3s all;
+    transition: .3s all;
+    -webkit-text-stroke-color: #ffa300;
 }
