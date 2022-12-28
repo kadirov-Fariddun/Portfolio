@@ -857,7 +857,7 @@ a{
     transition:.3s all;
     fill:rgb(64, 158, 221);
 }
-.footer__links a:hover svg:nth-child(2){
+.footer__links a:nth-child(2):hover svg{
     fill:red;
 }
 
