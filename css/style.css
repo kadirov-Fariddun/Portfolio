@@ -147,6 +147,7 @@ a{
     right: 20px;
     /* display: none; */
     cursor: pointer;
+    z-index: 999;
 }
 
 .close-burger{
@@ -887,4 +888,187 @@ a{
     -o-transition: .3s all;
     transition: .3s all;
     -webkit-text-stroke-color: #ffa300;
+}
+
+
+/******* communication ******/
+.communication{
+    transition: .3s all;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0,.7);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+    opacity: 0;
+}
+
+.close-communication{
+    position: absolute;
+    top:40px;
+    right: 40px;
+    font-size: 50px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.communication-title{
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.communication-sub-title{
+    opacity: .6;
+    margin-bottom: 50px;
+}
+
+.communication form{
+    width: 100%;
+}
+
+.communication form .communication-input-name{
+    transition: .3s all;
+    max-width: 320px;
+    width: 100%;
+    height: 35px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+
+
+.communication form .communication-input-name span:nth-child(1){
+    transition: .3s all;
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 5px;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid #0eb48b;
+    z-index: -1;
+    width: 5%;
+}
+
+
+.communication form .communication-input-name span:nth-child(2){
+    transition: .3s all;
+    content: "";
+    position: absolute;
+    right: -10px;
+    top: 5px;
+    width: 100%;
+    height: 100%;
+    border-top: 1px solid #0eb48b;
+    z-index: -1;
+    width: 5%;
+}
+
+
+.communication form .communication-input-name.input-focus span:nth-child(1),
+.communication form .communication-input-name.input-focus span:nth-child(2){
+    transition: .3s all;
+    width: 30%;
+}
+
+
+
+
+.communication form .communication-input-name input{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: #fff;
+}
+
+
+.communication-btn{
+    transition: .1s all;
+    max-width: 320px;
+    width: 100%;
+    height: 35px;
+    margin: 0 auto;
+    cursor: pointer;
+    background-color:#0eb48b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.communication-btn:hover{
+    transition: .1s all;
+    transform: translateY(-1px);
+}
+
+.communication-btn:active{
+    transition: .1s all;
+    transform: scale(.98);
+}
+
+
+.communication-thanks {
+    font-size: 50px;
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.communication-thanks .svgs{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.communication-thanks .svgs svg{
+    width: 70px;
+    height: 70px;
+}
+
+
+.com-head{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 10px 0;
+    font-size: 12px;
+    /* z-index: -1; */
+    display: none;
+    width: 100%;
+    height: 40px;
+    align-items: center;
+    background-color: rgb(6, 5, 41);
+    justify-content: center;
+    text-align: center;
+}
+
+
+.com-head p{
+    margin:0 10px;
+    color: rgb(255,255,255,.5);
+    font-weight: 900;
+    text-align: center;
+}
+
+.com-head p span{
+    margin-left: 5px;
+    letter-spacing: 1px;
+    color:rgb(64, 158, 221);
+    text-align: center;
 }
