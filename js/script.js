@@ -8,31 +8,12 @@ const navbar = document.querySelector('.navbar');
 const about = document.querySelector('.about');
 const burger = document.querySelector('.burger svg');
 const closeBurger = document.querySelector('.close-burger');
-const comInput = document.querySelectorAll('.communication-input-name input');
-const closeCommunication = document.querySelector('.close-communication');
-const communication = document.querySelector('.communication');
-const communicationTitle = document.querySelector('.communication-title');
-const communicationSubTitle = document.querySelector('.communication-sub-title');
-const communicationForm = document.querySelector('.communication form');
-const communicationName = document.querySelector('.communication-name');
-const communicationLastname = document.querySelector('.communication-lastname');
-const communicationBtn = document.querySelector('.communication-btn');
-const comHead = document.querySelector('.com-head');
-const communicationThanks = document.querySelector('.communication-thanks');
-let user = new Object();
-let users = [];
-let date = new Date();
 
 
 
 
 
 window.onload = () => {
-    if(!localStorage.length){
-    setTimeout(() => {
-        communiccations();
-    }, 3000);
-};
     setTimeout(() => {
         // navbar.style.left = '30px';
         headerAvatarka.style.opacity = 1;
@@ -42,93 +23,13 @@ window.onload = () => {
     }, 500);
 }
 
-closeCom();
-
-// закрываем окно для знакомства
-function closeCom() {
-    closeCommunication.onclick = () => {
-        communication.style.display = 'none'; 
-    }
-};
-
-// запускаем окно для знакомства
-function communiccations() {
-    communication.style.display = 'flex';
-    setTimeout(() => {
-         communication.style.opacity = '1';
-    }, 200);
-};
-
-
-
-if(localStorage.length){
-    users = JSON.parse(localStorage.getItem('users'));
-    fillHtml();
-    comHead.style.display = 'flex';
-};
-
-
-//заливаем данные в массив
-function pushUsers(){
-    communicationBtn.onclick = () => {
-        user = {
-            name: communicationName.value,
-            lastname: communicationLastname.value,
-            signYear: date.getFullYear(),
-            signMonth:date.getMonth()+1,
-            signDay: date.getDate(),
-    };  
-
-    if(communicationName.value !== ''){
-        users.push(user);
-       localStorage.setItem('users',JSON.stringify(users));
-       fillHtml();
-       communicationThanks.style.display = 'block';
-       communicationTitle.style.opacity = '0';
-       communicationSubTitle.style.opacity = '0';
-       communicationForm.style.opacity= '0';
-       setTimeout(() => {
-        communication.style.display = 'none';
-       }, 2000);
-    }
-    communicationName.value = '';
-    communicationLastname.value = '';
-}
-};
-pushUsers();
 
 
 
 
 
-// заполняем html
-function fillHtml() {
-    users.forEach((item,index) => {
-       comHead.innerHTML = `
-       <p class="user-name">Имя: <span>${item.name}</span></p>
-      ${item.lastname !== '' ? `<p calss="user-lastname">Фамилия: <span>${item.lastname}</span></p>`:''} 
-       <p class="user-name">Дата ввода: <span>${item.signDay}.${item.signMonth}.${item.signYear}</span></p>
-       `;
-    });
-}
 
 
-
-
- comInput[0].onfocus = () => {
-        document.querySelectorAll('.communication-input-name')[0].classList.add('input-focus')
-}
-comInput[0].onblur = () => {
-    document.querySelectorAll('.communication-input-name')[0].classList.remove('input-focus')
-}
-
-comInput[1].onfocus = () => {
-    document.querySelectorAll('.communication-input-name')[1].classList.add('input-focus')
-}
-
-comInput[1].onblur = () => {
-    document.querySelectorAll('.communication-input-name')[1].classList.remove('input-focus')
-}
 
 
 let finish = false;
