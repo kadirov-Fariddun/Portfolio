@@ -1,0 +1,512 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-transform: uppercase;
+}
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+/***** wrapper ****/
+.wrapper{
+    height: 100vh;
+    width: 100%;
+    padding:48px 20px 0 20px;
+    background: radial-gradient(134.34% 134.34% at 50% 0%, #1F3757 0%, #131537 100%);
+}
+
+
+/**** rps-title ****/
+.rps-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 700px;
+    width: 100%;
+    height: 150px;
+    border: 3px solid rgba(255, 255, 255, 0.289199);
+    border-radius: 15px;
+    padding: 0 24px 0 32px;
+    margin: 0px auto 64px auto;
+}
+
+.rps-title h1{
+font-size: 40px;
+line-height: 32px;
+color: #FFFFFF;
+text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
+}
+.rps-title h1 span{
+    display: block;
+}
+.score{
+    background: linear-gradient(0deg, #F3F3F3 0%, #FFFFFF 100%);
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
+    border-radius: 8px;
+    width: 150px;
+    height: 114px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.score h1{
+    color: #565468;
+    font-size: 64px;
+    line-height: 64px;
+}
+.score p{
+    color: #2A45C2;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/***** rps-play-zone ******/
+.rps-play-zone{
+    transition: 1s all;
+    display: flex;
+    max-width: 531px;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    margin: 0 auto;
+    position: relative;
+}
+.rps-play-zone.game{
+    transition: 1s all;
+    display: flex;
+    flex-wrap: nowrap;
+    max-width: 700px;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.rps{
+    transition: .3s all;
+    width: 198px;
+    height: 194px;
+    border-radius: 50%;
+    background-color: #4664F4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
+    border-bottom: 7px solid #142991;
+    z-index: 2;
+}
+.rps.active{
+    transition: .3s all;
+    display: flex;
+}
+
+/****** scissors *****/
+.scissors{
+    background-color: #EB9F0E;
+    border-color: #a06c0a;
+    margin-left: auto;
+}
+
+
+
+/****** rock  *****/
+.rock {
+    background-color: #DB2E4D;
+    border-color: #881227;
+}
+
+
+
+/********* bg animate ******/
+.rps .bg-animate{
+    transition: .3s all;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: inherit;
+    width: inherit;
+    border-radius: inherit;
+    opacity: .05;
+    background-color: #fff;
+    z-index: 1;
+    transform: scale(0);
+}
+.rps:hover .bg-animate{
+    animation: bg-animate linear .5s infinite;
+}
+@keyframes bg-animate{
+    0%{
+        transform:scale(1.2);
+    }
+    100%{
+        transform:scale(1.4);
+    }
+}
+
+.rps span{
+    width: 152px;
+    height: 144px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background: linear-gradient(0deg, #F3F3F3 0%, #DADADA 98.34%);
+    z-index: 3;
+    border-top: 10px solid#BABFD4;
+}
+.rps img{
+    z-index: 4;
+}
+
+
+/****** triangle play zone *****/
+.rps-play-zone .triangle{
+    transition: .3s all;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 20%;
+    left: 0%;
+    z-index: 1;
+    opacity: .3;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+}
+.rps-play-zone .triangle div{
+    border-radius: 20px;
+    height: 20px;
+}
+.rps-play-zone .triangle div:nth-child(1){
+    width: 80%;
+    background-color: black;
+}
+
+.rps-play-zone .triangle div:nth-child(2){
+    width: 60%;
+    background-color: black;
+    transform-origin: right;
+    transform:rotate(-55deg);
+    position: relative;
+    bottom: 20px;
+    left: 37px;
+}
+
+.rps-play-zone .triangle div:nth-child(3){
+    width: 60%;
+    background-color: black;
+    transform-origin: left;
+    transform:rotate(55deg);
+    position: relative;
+    bottom: 40px;
+    right: 37px;
+}
+/***** rules-info *****/
+.rules{
+    opacity: 0;
+    transition: .3s ease-in;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0,.5);
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    display: none;
+}
+.rules-active{
+    transition: .3s ease-in;
+    opacity: 1;
+}
+.rules-info{
+    background-color: #FFFFFF;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
+    border-radius: 8px;
+    padding: 32px;
+}
+.rules-info-title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.rules-info-title h4{ 
+   color: #3B4262;
+   font-size: 32px;
+   margin-bottom: 48px;
+}
+.rules-info-title span{
+   color:  #B1B4C5;
+   font-size: 60px;
+   line-height: 30px;
+   font-weight: 600;
+   cursor: pointer;
+}
+.rules-info img{
+    width: 100%;
+}
+
+/*** rps-btn ***/
+.rps-btn{
+    position: absolute;
+    right: 32px;
+    bottom: 32px;
+}
+.rps-btn button{
+    width: 128px;
+    height: 40px;
+    background: radial-gradient(134.34% 134.34% at 50% 0%, #1F3757 0%, #131537 100%);
+    border: 1px solid #FFFFFF;
+    border-radius: 8px;
+    letter-spacing: 2.5px;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: .3s all;
+}
+.rps-btn button:hover{
+    transition: .3s all;
+    background: linear-gradient(0deg, #F3F3F3 0%, #FFFFFF 100%);
+    color: #3B4262;
+
+}
+
+
+.home-active{
+    margin-right: auto;
+}
+.home-active::before{
+    content:"YOUR PICKED";
+    position: absolute;
+    left: 50%;
+    top: -60px;
+    transform: translateX(-50%);
+    letter-spacing: 3px;
+    color: #FFFFFF;
+    text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
+    font-size: 24px;
+    white-space: nowrap;
+    transition: .3s all;
+}
+
+.guest-player::after{
+    content:"THE HOUSE PICKED";
+    position: absolute;
+    left: 50%;
+    top: -60px;
+    transform: translateX(-50%);
+    letter-spacing: 3px;
+    color: #FFFFFF;
+    text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
+    font-size: 24px;
+    white-space: nowrap;
+    transition: .3s all;
+}
+
+
+.win-title:nth-child(2),
+.win-title:nth-child(3){
+    display: none;
+}
+.win-title{
+    text-align: center;
+}
+.win-title h1{
+    color: #FFFFFF;
+    text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
+    font-size: 56px;
+}
+.win-title button{
+    background: linear-gradient(0deg, #F3F3F3 0%, #FFFFFF 100%);
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
+    border-radius: 8px;
+    letter-spacing: 2.5px;
+    color: #3B4262;
+    font-size: 16px;
+    width: 220px;
+    height: 48px;
+    cursor: pointer;
+    border: none;
+    transition: .3s all;
+    margin-top: 16px;
+}
+.win-title button:hover{
+    transition: .3s all;
+    color: red;
+}
+
+
+/****** media ********/
+/***** 700 ***/
+@media(max-width:700px){
+    .rps-play-zone.game{
+        flex-wrap: wrap;
+        padding: 0 20px;
+        max-width: 550px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        top: 59%;
+    }
+    .rps-play-zone.game div{
+        margin: 0;
+    }
+    .win-title{
+        order: 3;
+        margin: 0;
+        margin: 0 auto;
+    }
+    .win-title h1{
+        font-size: 26px;
+    }
+    .win-title button{
+        font-size: 16px;
+        width: 180px;
+        height: 38px;
+    }
+
+    .home-active::before{
+        font-size: 16px;
+    }
+    
+    .guest-player::after{
+        font-size: 16px;
+    }
+}
+
+
+
+
+/***** 600 ***/
+@media(max-width:600px){
+    .rps-play-zone{
+        max-width: 400px;
+    }
+    
+    .rps{
+        width: 168px;
+        height: 164px;
+    }
+    .rps span{
+        width: 122px;
+        height: 114px;
+    }
+
+    .rps-btn{
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+}
+
+
+/***** 480 ***/
+@media(max-width:480px){
+    .rps-title{
+        margin-bottom: 125px;
+    }
+    .rps-title h1{
+        font-size: 30px;
+        line-height: 25px;
+        }
+        .score{
+            width: 120px;
+            height: 95px;
+        }
+        .score h1{
+            line-height: 44px;
+            font-size: 44px;
+        }
+
+        .rps-play-zone{
+            max-width: 316px;
+        }
+        
+        .rps{
+            width: 128px;
+            height: 124px;
+        }
+        .rps span{
+            width: 82px;
+            height: 82px;
+        }
+        .rps img[alt=paper]{
+            width: 37.21px;
+            height: 50px;
+        }
+        .rps img[alt=scissors]{
+            width: 30.07px;
+            height: 50px;
+        }
+        .rps img[alt=rock]{
+            width: 34px;
+            height: 34px;
+        }
+
+        .rps-play-zone.game{
+            max-width: 400px;
+            width: 100%;
+        }
+        .win-title h1{
+            font-size: 20px;
+        }
+        .win-title button{
+            font-size: 14px;
+            width: 160px;
+            height: 35px;
+        }
+    
+        .home-active::before{
+            font-size: 14px;
+        }
+        
+        .guest-player::after{
+            font-size: 14px;
+        }
+        
+}
+/***** 400 ***/
+@media(max-width:400px){
+    .rps-title{
+        height: 120px;
+    }
+    .rps-title h1{
+        font-size: 20px;
+        line-height: 18px;
+        }
+        .score{
+            width: 100px;
+            height: 70px;
+        }
+        .score h1{
+            line-height: 35px;
+            font-size: 44px;
+        }
+        .score p{
+            font-size: 14px;
+        }
+        .home-active::before{
+            font-size: 10px;
+        }
+        
+        .guest-player::after{
+            font-size: 10px;
+        }
+}

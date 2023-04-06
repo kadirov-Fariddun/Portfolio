@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="rps-title">
+            <h1>
+                <span>rock</span>
+                <span>paper</span>
+                <span>scissors</span>
+            </h1>
+            <div class="score">
+                <p>score</p>
+                <h1>12</h1>
+            </div>
+        </div>
+        <div class="rps-play-zone">
+            <div class="triangle">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="paper rps">
+                <div class="bg-animate"></div>
+                <span></span>
+                <img src="./img/paper.png" alt="paper" width="67.21px" height="80px">
+            </div>
+            <div class="scissors rps">
+                <div class="bg-animate"></div>
+                <span></span>
+                <img src="./img/scissors.png" alt="scissors" width="54.07px" height="80px">
+            </div>
+            <div class="rock rps">
+                <div class="bg-animate"></div>
+                <span></span>
+                <img src="./img/rock.png" alt="rock" width="64px" height="64px">
+            </div>
+        </div>
+        <div class="rps-btn">
+            <button onclick="rulesActive('.rules','.rules-info-title span')">rules</button>
+        </div>
+        <div class="rules">
+            <div class="rules-info">
+                <div class="rules-info-title">
+                    <h4>rules</h4>
+                    <span>&times;</span>
+                </div>
+                <img src="./img/rules.png" alt="rules" max-width="305" height="auto">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
